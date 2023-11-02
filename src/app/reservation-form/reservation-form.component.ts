@@ -49,10 +49,13 @@ export class ReservationFormComponent implements OnInit {
 
       if(id){
         // Update
-        this.reservationService.updateReservation(id, reservation)
+        console.log(this.reservationService.updateReservation(id, reservation))
+        
       } else {
         // New
-        this.reservationService.addReservation(reservation)   
+        this.reservationService.addReservation(reservation);
+        console.log(
+        this.reservationService.addReservation(reservation))  
 
       }
 
