@@ -47,9 +47,9 @@
             <small class="text-danger" *ngIf="reservationForm.get('roomNumber')?.invalid && reservationForm.get('roomNumber')?.touched">
                 Room Number is required.
             </small>
-            <button class="btn btn-primary" type="reset">Reset</button>
         </div>
     </div>
 
     <button class="btn btn-primary" type="submit" [disabled]="reservationForm.invalid">Submit</button>
+    <button class="btn btn-primary" type="Reset">Reset</button>
 </form>
