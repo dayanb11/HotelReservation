@@ -2,12 +2,12 @@
 
 <h3 class="mt-5 mb-3">Create a new reservation</h3>
 
-<form [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
+<form #"reservationForm"="ngForm" (ngSubmit)="onSubmit()">
 {{reservationForm.value | json}}
     <div class="row mb-3">
         <div class="col">
             <label class="form-label">Check-In Date:</label>
-            <input class="form-control" type="date" name="checkInDate" ngModel required="checkInDate">
+            <input class="form-control" type="date" name="checkInDate" [ngModel]="reservation.checkInDate">
             <small class="text-danger" *ngIf="reservationForm.get('checkInDate')?.invalid && reservationForm.get('checkInDate')?.touched">
                 Check-In Date is required.
             </small>
